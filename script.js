@@ -1,0 +1,45 @@
+function updateClock() {
+    let now = new Date();
+
+    // ----- TIME (12-hour format) -----
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+    
+    let ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12 || 12;
+    
+    hours = String(hours).padStart(2, '0');
+    minutes = String(minutes).padStart(2, '0');
+    seconds = String(seconds).padStart(2, '0');
+    
+    let timeString = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+
+    // ----- DATE -----
+    let day = now.getDate();                    // Tarikh (1-31)
+    let month = now.getMonth() + 1;             // Mahina (0-11 so +1)
+    let year = now.getFullYear();               // Saal (2026)
+
+    // ----- DAY (Name) -----
+    let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    let dayName = days[now.getDay()];           // Din ka naam
+
+    let dateString = dayName + ', ' + day + ' ' + getMonthName(month) + ' ' + year;
+
+    // ----- Display -----
+    document.getElementById('time').textContent = timeString;
+    document.getElementById('date').textContent = dateString;
+}
+
+// Mahine ka naam lene ke liye function
+function getMonthName(month) {
+    let months = ['January', 'February', 'March', 'April', 'May', 'June', 
+                  'July', 'August', 'September', 'October', 'November', 'December'];
+    return months[month - 1];
+}
+
+// Pehli baar update karo
+updateClock();
+
+// Har 1 second baad update
+setInterval(updateClock, 1000);
