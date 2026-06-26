@@ -26,20 +26,16 @@ function updateClock() {
 
     let dateString = dayName + ', ' + day + ' ' + getMonthName(month) + ' ' + year;
 
-    // ----- Display -----
+    
     document.getElementById('time').textContent = timeString;
     document.getElementById('date').textContent = dateString;
 }
 
-// Mahine ka naam lene ke liye function
 function getMonthName(month) {
-    let months = ['January', 'February', 'March', 'April', 'May', 'June', 
-                  'July', 'August', 'September', 'October', 'November', 'December'];
+    let months = ['January' , 'February' , 'March' , 'April' , 'May' , 'June' , 'July' , 'August',
+                   'September' , 'October' , 'November', 'December' ];
     return months[month - 1];
 }
 
-// Pehli baar update karo
 updateClock();
-
-// Har 1 second baad update
 setInterval(updateClock, 1000);
