@@ -1,7 +1,5 @@
 function updateClock() {
     let now = new Date();
-
-    // ----- TIME (12-hour format) -----
     let hours = now.getHours();
     let minutes = now.getMinutes();
     let seconds = now.getSeconds();
@@ -15,14 +13,12 @@ function updateClock() {
     
     let timeString = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
 
-    // ----- DATE -----
-    let day = now.getDate();                    // Tarikh (1-31)
-    let month = now.getMonth() + 1;             // Mahina (0-11 so +1)
-    let year = now.getFullYear();               // Saal (2026)
+    let day = now.getDate();                    
+    let month = now.getMonth() + 1;             
+    let year = now.getFullYear();              
 
-    // ----- DAY (Name) -----
     let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    let dayName = days[now.getDay()];           // Din ka naam
+    let dayName = days[now.getDay()];          
 
     let dateString = dayName + ', ' + day + ' ' + getMonthName(month) + ' ' + year;
 
