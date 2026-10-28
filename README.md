@@ -10,7 +10,7 @@
 > [Click here to view live](https://hiba-sarwar07.github.io/Digital-Clock/)
 
 ### 📸 Preview
-
+![Preview](preview.png.jpeg)
 
 ### 🚀 Features
 - ⏰ Real-time hours, minutes, seconds
