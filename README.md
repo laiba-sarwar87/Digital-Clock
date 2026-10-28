@@ -7,7 +7,7 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 ### ✨ Live Demo
-> [Click here to view live](https://hiba-sarwar07.github.io/Digital-Clock/)
+> [Click here to view live](https://laiba-sarwar87.github.io/Digital-Clock/)
 
 ### 📸 Preview
 ![Preview](preview.png.jpeg)
