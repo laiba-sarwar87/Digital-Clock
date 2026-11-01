@@ -22,7 +22,6 @@ function updateClock() {
 
     let dateString = dayName + ', ' + day + ' ' + getMonthName(month) + ' ' + year;
 
-    
     document.getElementById('time').textContent = timeString;
     document.getElementById('date').textContent = dateString;
 }
